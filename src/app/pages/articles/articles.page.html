@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+      <ion-title>Articles</ion-title>
+      <ion-button size="small" slot="end" fill="clear">
+          <ion-icon name="map-outline" style="font-size: 20px;"></ion-icon>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="main_content_div">
+
+      <ion-label class="title_lbl">Recommended</ion-label>
+
+      <ion-slides pager="ios">
+          <ion-slide *ngFor="let item of story">
+              <div class="slide_back" [style.backgroundImage]="'url('+ item.img +')'">
+                  <ion-label>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</ion-label>
+              </div>
+          </ion-slide>
+      </ion-slides>
+
+      <ion-label class="title_lbl">New Articles</ion-label>
+
+      <div class="artical_div">
+          <div class="artical_box" *ngFor="let item of story" (click)="goToArticleDetail()">
+              <div class="back_img" [style.backgroundImage]="'url('+ item.img +')'"></div>
+              <div class="detail_div" style="padding-left: 16px;">
+                  <ion-label class="bold_lbl">Lorem ipsum dolor sit amet consectetur.</ion-label>
+                  <div class="flex_div">
+                      <ion-label>5 min ago</ion-label>
+                      <ion-label>10 Comments</ion-label>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</ion-content>

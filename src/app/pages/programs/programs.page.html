@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border" mode="ios">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Programs</ion-title>
+        <ion-button size="small" slot="end" fill="clear">
+            <ion-icon name="map-outline" style="font-size: 20px;"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content >
+    <div class="main_content_div">
+
+        <div class="header_flex" style="margin-bottom: 16px;">
+            <ion-label class="title_lbl">New Realeases</ion-label>
+            <ion-label class="more_lbl">More</ion-label>
+        </div>
+  
+        <ion-slides pager="ios">
+            <ion-slide *ngFor="let item of (story | slice: 0: 3)">
+                <div class="slide_back" [style.backgroundImage]="'url('+ item.img +')'">
+                    <ion-label>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</ion-label>
+                </div>
+            </ion-slide>
+        </ion-slides>
+
+        <div class="header_flex" style="margin-top: 20px;">
+            <ion-label class="title_lbl">Categories</ion-label>
+        </div>
+  
+        <div class="artical_div">
+            <div class="artical_box" *ngFor="let item of story" (click)="goToVideoList()">
+                <div class="back_img" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <div class="detail_div" style="padding-left: 16px;">
+                    <ion-label class="bold_lbl">{{item.name}}</ion-label>
+                    <div class="flex_div">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-label>(10 Comments)</ion-label>
+                    </div>
+                    <ion-label class="simp_lbl">30 Lessons</ion-label>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+  </ion-content>
+  

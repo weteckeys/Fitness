@@ -1,0 +1,97 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar>
+      <ion-button (click)="goToBack()" fill="clear" slot="start">
+          <ion-icon name="arrow-back" style="font-size: 26px;"></ion-icon>
+      </ion-button>
+      <ion-title>Trainer Profile</ion-title>
+      <ion-button size="small" slot="end" fill="clear">
+          <ion-icon name="map-outline"></ion-icon>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        
+        <div class="user_div">
+            <div class="user_flex">
+                <div class="border_div">
+                    <div class="back_user" [style.backgroundImage]="'url(assets/imgs/t1.jpg)'"></div>
+                </div>
+                <div class="user_detail">
+                    <ion-label class="bold_lbl">Piff Jenkins</ion-label>
+                    <ion-label class="small_lbl">Aerobics, Weight loss</ion-label>
+                    <div class="flex_ratings">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <ion-button expand="block" shape="round" (click)="goToAppBooking()">
+                Book an Appointment
+            </ion-button>
+        </div>
+
+        <div class="bottom_div">
+
+            <div class="segment_flex">
+                <div class="inner_box">
+                    <ion-label>Likes</ion-label>
+                    <ion-label>2772</ion-label>
+                </div>
+                <div class="inner_box">
+                    <ion-label>Comments</ion-label>
+                    <ion-label>1376</ion-label>
+                </div>
+                <div class="inner_box" style="border: 0px;">
+                    <ion-label>Suggested</ion-label>
+                    <ion-label>754</ion-label>
+                </div>
+            </div>
+
+            <div class="header_flex">
+                <ion-label class="title_lbl">About</ion-label>
+            </div>
+
+            <div class="about_div">
+                <ion-label class="about_lbl">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Consectetur veniam incidunt eius fuga, architecto recusandae ipsum asperiores tempore.
+                </ion-label>
+
+                <div class="about_flex">
+                    <ion-icon name="navigate-outline" style="font-size: 23px;"></ion-icon>
+                    <ion-label>Eva Surbhi complex, Aksharwadi road Bhavnagar - 364001</ion-label>
+                </div>
+
+                <div class="about_flex" style="margin-bottom: 20px;">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <ion-label>9876543212</ion-label>
+                </div>
+
+            </div>
+
+            <div class="header_flex">
+                <ion-label class="title_lbl">Articles</ion-label>
+                <ion-label class="more_lbl" (click)="goToArticle()">View All</ion-label>
+            </div>
+
+            <div class="program_segment">
+
+                <div class="program_div" *ngFor="let item of (story | slice : 0: 3)" (click)="goToArticleDetail()">
+                    <div class="main_flex">
+                        <div class="back_img" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                        <div class="detail_div">
+                            <ion-label class="name_lbl">What is lorem ipsum ?</ion-label>
+                            <ion-label class="small_lbl">Lorem ipsum, dolor sit amet consectetur 
+                              adipisicing elit. Placeat nulla quasi saepe facilis.</ion-label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</ion-content>

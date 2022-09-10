@@ -1,0 +1,153 @@
+// ion-toolbar {
+//     --background: #2d2d39;
+// }
+
+ion-content {
+    --background: #2d2d39;
+}
+
+.main_content_div {
+    background: #1c1e2a;
+    width: 100%;
+    min-height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    ion-label {
+        display: block;
+    }
+
+    .title_lbl {
+        font-family: 'medium';
+        font-size: 15px;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+
+    .story_div {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        overflow: scroll;
+        border-bottom: 1px solid #2d2d39;
+
+        .outer_div {
+            height: 50px;
+            width: 50px;
+            min-width: 50px;
+            border: 2px solid var(--ion-color-primary);
+            background: white;
+            border-radius: 100%;
+            position: relative;
+            margin-right: 16px;
+
+            .user_div {
+                height: 42px;
+                width: 42px;
+                border-radius: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            .status_div {
+                width: 12px;
+                height: 12px;
+                border-radius: 100%;
+                background: green;
+                position: absolute;
+                bottom: 0;
+                right: 3px;
+            }
+        }
+
+        .trainer_story_div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 5px;
+            padding-right: 5px;
+
+           
+
+            ion-label {
+                font-size: 14px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .trainer_div {
+        padding: 16px;
+
+        .trainer_box {
+            background: #2d2d39;
+            border-radius: 10px;
+            padding: 10px;
+            // margin-left: 35px;
+            margin-bottom: 16px;
+
+            .upper_flex {
+                display: flex;
+                position: relative;
+
+                .back_img {
+                    height: 70px;
+                    width: 70px;
+                    min-width: 70px;
+                    border-radius: 5px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    // margin-left: -45px;
+                }
+
+                .trainer_detail {
+                    padding-left: 16px;
+                    text-align: left;
+                    .bold_lbl {
+                        font-family: 'medium';
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                    }
+                    .small_grey {
+                        font-size: 12px;
+                    }
+
+                    .addr_div {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 5px;
+                        ion-icon {
+                            color: grey;
+                            font-size: 18px;
+                            margin-right: 10px;
+                        }
+                        ion-label {
+                            font-size: 12px;
+                            color: grey;
+
+                        }
+                    }
+                }
+            }
+
+            .lower_flex {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 7px;
+                align-items: center;
+
+                ion-button {
+                    margin: 0px;
+                }
+            }
+        }
+    }
+
+    
+}

@@ -1,0 +1,49 @@
+<ion-header class="ion-no-border" mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" fill="clear" slot="start">
+            <ion-icon name="arrow-back" style="font-size: 26px;"></ion-icon>
+        </ion-button>
+        <ion-title>Articles</ion-title>
+        <ion-button size="small" slot="end" fill="clear">
+            <ion-icon name="map-outline" style="font-size: 20px;"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="back_img" [style.backgroundImage]="'url(assets/imgs/t2.jpg)'"></div>
+        <div class="content_div">
+
+            <div class="user_div">
+                <div [style.backgroundImage]="'url(assets/imgs/t2.jpg)'" class="round_user"></div>
+                <div class="user_detail">
+                    <ion-label class="name_lbl">Penny Tool</ion-label>
+                    <ion-label class="small_lbl">Aerobics</ion-label>
+                </div>
+                <div class="icn_div">
+                    <ion-icon name="share-social-outline"></ion-icon>
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+            </div>
+
+            <ion-label>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus vitae exercitationem quam
+              totam sint labore maiores nam laborum?
+            </ion-label>
+
+            <ion-label>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quis labore? Debitis in cum rem
+              fugit possimus, assumenda molestias totam ipsam repellat?
+            </ion-label>
+
+            <ion-label>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis soluta suscipit nisi fugit nihil,
+              fuga, sit alias.
+            </ion-label>
+
+        </div>
+
+    </div>
+</ion-content>

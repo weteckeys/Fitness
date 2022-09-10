@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border" mode="ios">
+    <ion-toolbar>
+        <ion-title>Sign In</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content >
+    <div class="main_content_div">
+        <ion-input type="text" placeholder="Email"></ion-input>
+        <ion-input type="text" placeholder="Password"></ion-input>
+        <ion-label class="forgot_lbl" (click)="goToForgot()">Forgot Password ?</ion-label>
+
+        <div class="check_div">
+            <ion-checkbox mode="md"></ion-checkbox>
+            <ion-label>Remember me</ion-label>
+        </div>
+
+        <ion-button expand="block" shape="round" (click)="goToTabs()">
+          Sign In
+        </ion-button>
+
+        <div class="or_div">
+            <div></div>
+            <ion-label>OR</ion-label>
+            <div></div>
+        </div>
+
+        <ion-row>
+            <ion-col size="6">
+                <ion-button expand="block" shape="round" style="--background: #475A95;">
+                  Facebook
+                </ion-button>
+            </ion-col>
+            <ion-col size="6">
+                <ion-button expand="block" shape="round" style="--background: #5ca1f2;">
+                  Twitter
+                </ion-button>
+            </ion-col>
+        </ion-row>
+
+    </div>
+</ion-content>

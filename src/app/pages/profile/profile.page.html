@@ -1,0 +1,79 @@
+<ion-header class="ion-no-border" mode="ios">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Profile</ion-title>
+        <ion-button size="small" slot="end" fill="clear">
+            <ion-icon name="map-outline"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        
+        <div class="user_div">
+            <div class="user_flex">
+                <div class="border_div">
+                    <div class="back_user" [style.backgroundImage]="'url(assets/imgs/t1.jpg)'"></div>
+                </div>
+                <div class="user_detail">
+                    <ion-label class="bold_lbl">Piff Jenkins</ion-label>
+                    <ion-label class="small_lbl">@piffjenkins</ion-label>
+                </div>
+            </div>
+            <ion-button expand="block" shape="round" (click)="goToEditProfile()">
+                Edit Profile
+            </ion-button>
+        </div>
+
+        <div class="bottom_div">
+
+            <div class="segment_flex">
+                <div (click)="changeSegment('program')">
+                    <ion-label [class.active]="tabID == 'program'">My Programs</ion-label>
+                    <ion-label [class.active]="tabID == 'program'">27</ion-label>
+                </div>
+                <div (click)="changeSegment('trainer')">
+                    <ion-label [class.active]="tabID == 'trainer'">My Trainers</ion-label>
+                    <ion-label [class.active]="tabID == 'trainer'">10</ion-label>
+                </div>
+            </div>
+
+            <div class="program_segment" *ngIf="tabID == 'program'">
+
+                <div class="program_div" *ngFor="let item of story">
+                    <div class="main_flex">
+                        <div class="back_img" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                        <div class="detail_div">
+                            <ion-label class="name_lbl">Penny Tool</ion-label>
+                            <ion-label class="small_lbl">Aerobics</ion-label>
+                            <div class="addr_div">
+                                <ion-icon name="navigate-outline"></ion-icon>
+                                <ion-label>Eva surbhi complex, aksharwadi road, Bhavnagar - 364001</ion-label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail_flex">
+                        <ion-label>March 31, 2020 / 09:00 AM</ion-label>
+                        <ion-label style="color: var(--ion-color-primary);">More...</ion-label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="trainer_segment" *ngIf="tabID == 'trainer'">
+                <ion-row>
+                  <ion-col size="6" *ngFor="let item of story" (click)="goToTrainerProfile()">
+                      <div class="back_img" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                      <ion-label class="bold_lbl">Brandon Guidelines</ion-label>
+                      <ion-label class="small_lbl">Bodyfit</ion-label>
+                  </ion-col>
+                </ion-row>
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>

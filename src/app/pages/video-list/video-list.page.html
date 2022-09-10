@@ -1,0 +1,28 @@
+<ion-content>
+    <div class="main_content_div">
+        <ion-icon class="back_image" name="arrow-back-outline" (click)="goBack()"></ion-icon>
+
+        <video width="100%" controls poster="assets/imgs/t4.jpg">
+            <source src="assets/imgs/video.mp4" type="video/mp4">
+        </video>
+
+        <ion-label class="title_header">Weight Loss</ion-label>
+
+        <div class="bottom_content_div">
+            <div class="card_div" *ngFor="let item of chapters">
+                <div class="round_image" [style.backgroundImage]="'url( '+ item.img +' )'">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                <div class="content_div">
+                    <ion-label class="title_lbl">{{item.name}}</ion-label>
+                    <ion-label class="small_lbl">{{item.per}} min</ion-label>
+                </div>
+                <div class="action_div">
+                    <ion-icon name="arrow-redo-outline"></ion-icon>
+                    <ion-icon name="heart-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ion-content>

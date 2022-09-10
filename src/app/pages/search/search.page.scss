@@ -1,0 +1,117 @@
+ion-content {
+    --background: #2d2d39;
+}
+
+.main_content_div {
+    background: #1c1e2a;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    #map {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 150ms ease-in;
+        display: block;
+        &.show-map {
+            opacity: 1;
+        }
+    }
+    ion-label {
+        display: block;
+    }
+
+    .search_div {
+        padding: 16px;
+
+        ion-input {
+            border-radius: 10px;
+            background: #2d2d39;
+            color: grey;
+            text-align: left;
+            --padding-start: 8px;
+            font-family: "regular";
+            color: white;
+            ion-icon {
+                color: grey;
+                margin-left: 16px;
+            }
+        }
+    }
+
+    .slider_div {
+        padding: 16px;
+        display: flex;
+        overflow: scroll;
+
+        .slide_box {
+            background: #2d2d39;
+            border-radius: 10px;
+            padding: 10px;
+            width: 160px;
+            min-width: 160px;
+            margin-right: 16px;
+
+            .image_div {
+                position: relative;
+                padding-bottom: 10px;
+                border-bottom: 1px solid lightgrey;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .rate_lbl {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    right: 0px;
+
+                    ion-icon {
+                        font-size: 10px;
+                        color: orange;
+                    }
+                    ion-label {
+                        font-size: 13px;
+                        margin-left: 7px;
+                    }
+                }
+
+                .round_user {
+                    width: 50px;
+                    height: 50px;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border-radius: 10px;
+                    margin-bottom: 5px;
+                    margin-top: 20px;
+                }
+                .name_lbl {
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+            .detail_div {
+                display: flex;
+                align-items: center;
+                padding-top: 10px;
+
+                ion-icon {
+                    color: var(--ion-color-primary);
+                }
+
+                ion-label {
+                    font-size: 14px;
+                    margin-left: 7px;
+                    color: var(--ion-color-primary);
+                }
+            }
+        }
+    }
+}

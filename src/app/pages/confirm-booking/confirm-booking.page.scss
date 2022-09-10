@@ -1,0 +1,43 @@
+.main_content_div {
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    ion-label {
+        display: block;
+        color: white;
+    }
+
+    .abs_div {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        padding: 20px;
+
+        img {
+            width: 60px;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+    
+        .bold_lbl {
+            text-align: center;
+            font-family: 'medium';
+            margin-bottom: 10px;
+        }
+    
+        .small_lbl {
+            font-size: 14px;
+            text-align: center;
+            color: grey;
+        }
+    }
+
+    
+}

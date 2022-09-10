@@ -1,0 +1,42 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+      <ion-menu contentId="main-content" type="overlay">
+
+        <ion-header class="ion-no-border" mode="ios">
+            <ion-toolbar>
+                <ion-button slor="start" fill="clear" (click)="close()">
+                    <ion-icon name="close"></ion-icon>
+                </ion-button>
+                <ion-title>Menu</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+          <ion-content>
+                
+                <div class="menu_content_div">
+                    <div class="round_user" [style.backgroundImage]="'url(assets/imgs/t4.jpg)'"></div>
+                    <ion-label class="name_lbl">Dylan Meringue</ion-label>
+                    <ion-label class="loc_lbl">@dylanmeringue</ion-label>
+
+                    <div class="menu_div">
+                        <ion-menu-toggle auto-hide="false">
+                            <ion-label (click)="goToProfile()">My Profile</ion-label>
+                        </ion-menu-toggle>
+                        <ion-menu-toggle auto-hide="false">
+                            <ion-label (click)="goToArticles()">Articles</ion-label>
+                        </ion-menu-toggle>
+                        <ion-menu-toggle auto-hide="false">
+                            <ion-label (click)="goToTrainers()">Trainers</ion-label>
+                        </ion-menu-toggle>
+                        <ion-menu-toggle auto-hide="false">
+                            <ion-label (click)="goToSettings()">Settings</ion-label>
+                        </ion-menu-toggle>                        
+                    </div>
+                </div>
+
+          </ion-content>
+      </ion-menu>
+      <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+  <!-- <ion-router-outlet></ion-router-outlet> -->
+</ion-app>

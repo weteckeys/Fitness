@@ -1,0 +1,79 @@
+ion-toolbar {
+    --background: #2d2d39;
+}
+
+ion-content {
+    --background: #2d2d39;
+}
+
+.main_content_div {
+    background: #1c1e2a;
+    width: 100%;
+    min-height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 16px;
+    padding-top: 60px;
+
+    ion-label {
+        display: block;
+    }
+
+    ion-input {
+        background: #2d2d39;
+        border-radius: 5px;
+        height: 48px;
+        margin-bottom: 16px;
+        --padding-start: 16px;
+        --padding-end: 16px;
+    }
+
+    .forgot_lbl {
+        text-align: right;
+        font-size: 14px;
+        text-align: right;
+    }
+
+    .check_div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        ion-checkbox{
+            --border-color: grey;
+            --border-color-checked: grey;
+            --checkmark-color: var(--ion-color-primary);
+            --background-checked: transparent;
+            --background: transparent;
+        }
+
+        ion-label {
+            margin-left: 10px;
+            font-size: 14px;
+        }
+    }
+
+    ion-button {
+        margin: 0px;
+    }
+
+    .or_div {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        div {
+            width: 100%;
+            height: 1px;
+            background: grey;
+        }
+
+        ion-label {
+            width: 100px !important;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 14px;
+        }
+    }
+}

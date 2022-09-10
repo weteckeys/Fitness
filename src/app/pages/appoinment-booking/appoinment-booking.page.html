@@ -1,0 +1,84 @@
+<ion-header class="ion-no-border" mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" fill="clear" slot="start">
+            <ion-icon name="arrow-back" style="font-size: 26px;"></ion-icon>
+        </ion-button>
+        <ion-title>Book an Appointment</ion-title>
+        <ion-button size="small" slot="end" fill="clear">
+            <ion-icon name="map-outline"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="detail_tab" *ngIf="tabID == 1">
+            <div class="user_flex">
+              <div class="border_div">
+                <div class="back_user" [style.backgroundImage]="'url(assets/imgs/t1.jpg)'"></div>
+              </div>
+              <div class="user_detail">
+                <ion-label class="bold_lbl">Piff Jenkins</ion-label>
+                <ion-label class="small_lbl">Aerobics, Weight loss</ion-label>
+                <div class="flex_ratings">
+                  <ion-icon name="location-outline"></ion-icon>
+                  <ion-label>Bhavnagar, Gujrat, 364001</ion-label>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom_div">
+
+              <ion-label class="title_lbl">Appointment For</ion-label>
+
+              <ion-input type="text" placeholder="Name, Surname"></ion-input>
+              <ion-input type="text" placeholder="Contact Number"></ion-input>
+
+              <ion-label class="title_lbl">Who's coming with you ?</ion-label>
+
+              <div class="user_slider">
+                <div class="add_div">
+                  <ion-icon name="add"></ion-icon>
+                  <ion-label>Add</ion-label>
+                </div>
+                <div *ngFor="let item of [1,2,3,4,5]">
+                  <div class="user_back" [style.backgroundImage]="'url(assets/imgs/t1.jpg)'"></div>
+                  <ion-label>My Sister</ion-label>
+                </div>
+              </div>
+
+              <ion-button expand="block" shape="round" (click)="tabID = 2">
+                Next
+              </ion-button>
+
+            </div>
+        </div>
+
+        <div class="booking_tab" *ngIf="tabID == 2">
+            <ion-label class="title_lbl">Appointment For</ion-label>
+            <div class="calendar_div">
+                
+            </div>
+
+            <div class="bottom_div">
+              <ion-label class="title_lbl">Select Appointment Time</ion-label>
+
+              <ion-grid>
+                  <ion-row class="ion-no-padding">
+                      <ion-col [class.booked]="item.status == '1'" [class.new_booked]="item.status == '2'" size="3.5" *ngFor="let item of booked" (click)="slotBooking(item)">
+                          {{item.time}}
+                      </ion-col>
+                  </ion-row>
+              </ion-grid>
+
+              <ion-button expand="block" shape="round" (click)="openModal()">
+                Confirm
+              </ion-button>
+
+
+            </div>
+        </div>
+
+    </div>
+</ion-content>

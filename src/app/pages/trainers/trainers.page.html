@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border" mode="ios">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Trainers</ion-title>
+        <ion-button size="small" slot="end" fill="clear">
+            <ion-icon name="map-outline"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content >
+    <div class="main_content_div">
+
+        <ion-label class="title_lbl" style="padding: 16px;padding-bottom: 0px;">Online Personal Trainers</ion-label>
+
+        <div class="story_div">
+            <div class="outer_div" *ngFor="let item of story">
+                <div class="user_div" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <div class="status_div"></div>
+            </div>
+        </div>
+
+        <div class="trainer_div">
+
+            <ion-label class="title_lbl" style="margin-bottom: 20px;">Nearby Personal Trainers</ion-label>
+
+            <div class="trainer_box" *ngFor="let item of story" (click)="goToTrainerProfile()">
+                <div class="upper_flex">
+                    <div class="back_img" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                    <div class="trainer_detail">
+                        <ion-label class="bold_lbl">Brandon Guidelines</ion-label>
+                        <ion-label class="small_grey">Core Conditioning</ion-label>
+                        <div class="addr_div">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <ion-label>Bhavnagar, Gujarat, 364001</ion-label>
+                        </div>
+                    </div>
+                </div>
+                <div class="lower_flex">
+                    <ion-label>$ 300</ion-label>
+                    <ion-button shape="round" size="small">
+                        Follow
+                    </ion-button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>

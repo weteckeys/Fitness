@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <ion-label class="header_lbl">Profile</ion-label>
+
+        <div class="flex_div" (click)="goToEditProfile()">
+            <ion-label class="left_lbl">Edit Profile</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+
+        <div class="flex_div">
+            <ion-label class="left_lbl" (click)="goToReset()">Reset Password</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+
+        <div class="flex_div" (click)="goToNotification()">
+            <ion-label class="left_lbl">Notifications</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+
+        <ion-label class="header_lbl">Support</ion-label>
+
+        <div class="flex_div" (click)="goToTerms()">
+            <ion-label class="left_lbl">Terms & Policies</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+
+        <div class="flex_div" (click)="logout()">
+            <ion-label class="red_lbl">Logout</ion-label>
+        </div>
+
+
+    </div>
+</ion-content>

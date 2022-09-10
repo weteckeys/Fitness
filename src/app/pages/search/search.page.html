@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border" mode="ios">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Search</ion-title>
+        <ion-button size="small" slot="end" fill="clear">
+            <ion-icon name="map-outline"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div id="map"></div>
+
+        <div class="search_div">
+            <ion-input type="text" placeholder="Search">
+                <ion-icon name="search"></ion-icon>
+            </ion-input>
+        </div>
+
+        <div class="slider_div">
+            <div class="slide_box" *ngFor="let item of story" (click)="goToTrainer()">
+                <div class="image_div">
+                    <div class="rate_lbl">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-label>4.5</ion-label>
+                    </div>
+                    <div class="round_user" [style.backgroundImage]="'url('+ item +')'"></div>
+                    <ion-label class="name_lbl">Pennytool</ion-label>
+                </div>
+                <div class="detail_div">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <ion-label>9876543212</ion-label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ion-content>
